@@ -13,7 +13,7 @@
             <div id="my_modal_reg" class="modal_content_reg">
                 <span class="close_reg">&times;</span>
                 <div class="task_form_block">
-                    <form class="form_add_task" action="{{route('addTaskSubmit')}}" method="post">
+                    <form class="form_add_task" action="{{route('add.task.submit')}}" method="post">
                         @csrf
 
                         <label for="title">Название</label>
@@ -77,7 +77,7 @@
 
     </div>
     <div class="block_filter">
-        <form class="form_filter" action="{{route('showFilterTask')}}" method="post">
+        <form class="form_filter" action="{{route('show.filter.task')}}" method="post">
             @csrf
             <label for="filter">Фильтр</label>
             <select name="filter" id="filter">
@@ -92,7 +92,7 @@
 
         @if(isset($resp_people))
             <div class="block_filter">
-                <form class="form_filter" action="{{route('show_task_resp')}}" method="post">
+                <form class="form_filter" action="{{route('task.resp.show')}}" method="post">
                     @csrf
                     <label for="filter_responsible">Фильтр по ответственным</label>
                     <select name="filter_responsible" id="filter_responsible">
@@ -114,7 +114,7 @@
     @if($allTask->isNotEmpty())
         @foreach($allTask as $task)
             <div class="block_task">
-                <form action="{{route('changeTask')}}" method="post">
+                <form action="{{route('change.task')}}" method="post">
                     @csrf
                     <ul>
                         <li>Заголовок : <span style="color:

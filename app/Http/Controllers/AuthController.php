@@ -25,7 +25,7 @@ class AuthController extends Controller
 
         if (auth('web')->attempt($data)) {
 
-            return redirect(route('show_home'));
+            return redirect(route('show.home'));
         }
 
         return redirect(route('login'))->withErrors(['login' => 'Пользователя с таким логином не существует или
@@ -59,7 +59,6 @@ class AuthController extends Controller
             auth('web')->login($user);
         }
 
-        return redirect(route('show_home'));
-
+        return redirect(route('show.home'));
     }
 }

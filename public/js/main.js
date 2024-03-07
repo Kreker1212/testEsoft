@@ -32,5 +32,3 @@ $(document).mouseup(function (e) {
         $('.my_modal_reg').fadeOut();
     }
 });
-
-

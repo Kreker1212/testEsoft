@@ -16,10 +16,10 @@ use Illuminate\View\View;
 class IndexController extends Controller
 {
 
-    public function showLoginOrTasks() : Redirector
+    public function showLoginOrTasks() : RedirectResponse
     {
         if (auth('web')) {
-            return redirect(route('show_home'));
+            return redirect(route('show.home'));
         }
         return redirect(route('login'));
     }

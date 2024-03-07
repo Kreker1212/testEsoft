@@ -18,7 +18,7 @@
             <a href="{{route('register')}}">Регистрация</a>
         @endguest
         @auth('web')
-            <a href="{{route('show_home')}}">Задачи</a>
+            <a href="{{route('show.home')}}">Задачи</a>
             <a href="{{route('logout')}}">Выйти</a>
         @endauth
     </div>

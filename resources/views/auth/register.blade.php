@@ -6,7 +6,7 @@
 
 @section('main_content')
     <div class="block_form">
-        <form class="login_form" name="register_form" action="{{route('register_submit')}}" method="post">
+        <form class="login_form" name="register_form" action="{{route('register.submit')}}" method="post">
             @csrf
             <h1 class="h1_login_form">Регистрация</h1>
 

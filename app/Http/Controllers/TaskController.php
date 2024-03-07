@@ -117,7 +117,7 @@ class TaskController extends Controller
             'responsible_id' => $req->responsible_id,
         ]);
 
-        return redirect(route('show_home'));
+        return redirect(route('show.home'));
     }
 
     public function changeTask(TaskRepository $repository, Request $req): RedirectResponse
@@ -132,6 +132,6 @@ class TaskController extends Controller
         $task->responsible_id = $req->responsible_id ?? $task->responsible_id;
         $task->save();
 
-        return redirect(route('show_home'));
+        return redirect(route('show.home'));
     }
 }
